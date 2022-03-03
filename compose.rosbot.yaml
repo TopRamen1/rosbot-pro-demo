@@ -27,11 +27,9 @@ services:
 
   microros:
     image: husarion/micro-ros-agent
-    ports:
-      - "8888:8888/udp"
     network_mode: host
     ipc: host
-    evironment:
+    environment:
       - ROS_DOMAIN_ID=2
     command: udp4 --port 8888
 
